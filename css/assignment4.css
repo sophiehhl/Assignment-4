@@ -1,0 +1,73 @@
+body{
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+/* carousel */
+
+.carousel {
+    position: relative;
+  }
+  
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+}
+  
+.carousel-item {
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    @include transition($carousel-transition);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+  
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+  
+.carousel-item-next,
+.carousel-item-prev {
+    position: absolute;
+    top: 0;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.w-100 {
+    width: 100%!important;
+}
+
+/* grids */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-img-top{
+    width:100%;
+    height:auto;
+  }
+
+  /*mobile */
+  @media only screen and (max-width: 500px) {
+    body {
+      width: auto;
+    }
+    .container {
+        justify-content: center;
+    }
+  }
